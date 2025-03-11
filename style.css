@@ -6,3 +6,62 @@
     padding:0;
     box-sizing: border-box;
 }
+body{
+    min-width: 100px;
+    position: relative;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+body .sideBar{
+    position:absolute;
+    top:0;
+    left: -400px;
+    background-color: rgb(20, 20, 20);
+    height:100vh;
+    min-width: 300px;
+    width: 20%;
+    z-index:1;
+    transition: transform 500ms ease;
+}
+.sideBar.show{
+    transform:translateX(400px);
+}
+
+#openSideBar{
+    margin: 30px;
+    padding:5px;
+    border-radius: 8px;
+    background-color: transparent;
+    border:solid 4px white;
+    transition:ease-in-out 100ms
+}
+
+#openSideBar i{
+    color: black;
+    font-size:2rem;
+}
+
+#openSideBar:hover{
+    border-color: black;
+}
+.closeSideBar{
+    margin:25px;
+    padding:5px;
+    border-radius: 10px;
+    border:solid 2px black;
+    background-color: transparent;
+    transition: ease-in-out 100ms;
+}
+.closeSideBar:hover{
+    border-color:white
+}
+button:hover{
+    cursor: pointer;
+}
+.closeSideBar i{
+    color: white;
+    font-size:2rem;
+    font-weight: bold;
+}
