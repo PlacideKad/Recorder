@@ -1,12 +1,15 @@
 /* import the Roboto font from google fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto,wght@1,100..900&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
 }
 body{
+    display: flex;
+    flex-direction: column;
     min-width: 100px;
     position: relative;
     background-color: white;
@@ -30,11 +33,12 @@ body .sideBar{
 }
 
 #openSideBar{
+    max-width: 50px;
     margin: 30px;
     padding:5px;
     border-radius: 8px;
     background-color: transparent;
-    border:solid 4px white;
+    border:solid 4px transparent;
     transition:ease-in-out 100ms
 }
 
@@ -50,12 +54,12 @@ body .sideBar{
     margin:25px;
     padding:5px;
     border-radius: 10px;
-    border:solid 2px black;
+    border:solid 2px transparent;
     background-color: transparent;
     transition: ease-in-out 100ms;
 }
 .closeSideBar:hover{
-    border-color:white
+    border-color:white;
 }
 button:hover{
     cursor: pointer;
@@ -64,4 +68,32 @@ button:hover{
     color: white;
     font-size:2rem;
     font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+    height:60vh;
+}
+
+.controllers button{
+    height:150px;
+    width:150px;
+    border-radius: 100%;
+    border:solid 4px black;
+    background-color: transparent;
+    transition: transform ease 300ms,ease-in-out;
+}
+
+.controllers button i{
+    font-size:2.5rem;
+}
+.controllers button:active{
+    transform:scale(0.90);
+}
+.controllers button:hover{
+    background-color: black;
+    color:white;
 }
